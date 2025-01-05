@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { VideoPage } from '../page-objects/VideoPage';
+import { VideoPage } from '../../page-objects/VideoPage';
 
 test('Video Playback: Ensure embedded videos play without issues', async ({ page }) => {
     const videoPage = new VideoPage(page);

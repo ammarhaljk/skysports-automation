@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { NavigationMenu } from '../page-objects/NavigationMenu';
+import { NavigationMenu } from '../../page-objects/NavigationMenu';
 
 test('Navigation Menu: Verify menu links work', async ({ page }) => {
   const navigationMenu = new NavigationMenu(page);
