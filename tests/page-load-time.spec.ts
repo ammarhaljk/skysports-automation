@@ -13,11 +13,10 @@ test('Page Load Time: Measure and validate page load time', async ({ page }) => 
     await page.waitForLoadState('load');
 
     const endTime = Date.now();
-    const loadTime = (endTime - startTime) / 1000; // Convert to seconds
+    const loadTime = (endTime - startTime) / 1000;
 
     console.log(`${name} loaded in ${loadTime.toFixed(2)} seconds.`);
 
-    // Allow a small buffer (e.g., 0.1s) to avoid edge-case failures
-    expect(loadTime).toBeLessThanOrEqual(5.1); // Buffer to handle precision issues
+    expect(loadTime).toBeLessThanOrEqual(5.1);
   }
 });

@@ -14,10 +14,8 @@ test('Responsive Design: Ensure the site works well on smaller screens', async (
   const menuButton = page.locator('#site-header').getByRole('link').nth(1);
   await expect(menuButton).toBeVisible();
 
-  // Step 3: Click the menu button
   await menuButton.click();
 
-  // Step 4: Verify that the "Scores" link is visible in the menu
   const scoresLink = page.getByRole('link', { name: 'Scores', exact: true });
   await expect(scoresLink).toBeVisible();
 
